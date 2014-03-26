@@ -29,6 +29,14 @@ public class Criatura implements Comparable{
 		int a = r.nextInt(3) + 1;
 		return a;
 	}
+
+	public int getAtaque() {
+		return ataque;
+	}
+
+	public int getDefensa() {
+		return defensa;
+	}
 	
 	@Override
 	public int compareTo(Object o){
@@ -55,7 +63,7 @@ public class Criatura implements Comparable{
 	
 	@Override
 	public String toString() {
-		return "\nataque=" + ataque + ", defensa=" + defensa
+		return "ataque=" + ataque + ", defensa=" + defensa
 				+ ", costeInvocacion=" + costeInvocacion;
 	}
 

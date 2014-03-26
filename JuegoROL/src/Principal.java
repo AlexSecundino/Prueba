@@ -14,7 +14,6 @@ public class Principal {
 	
 		Baraja nueva = new Baraja();
 		nueva.turno();
-		System.out.println(nueva);
 	}
 
 }
