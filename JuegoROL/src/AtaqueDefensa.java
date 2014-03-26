@@ -1,7 +1,7 @@
 
 public enum AtaqueDefensa {
 	
-	cien(100), doscientos(200), doscientoscincuenta(250), quinientos(500), ochocientos(750), mil(1000);
+	cien(100), doscientos(200), doscientoscincuenta(250), quinientos(500), ochocientos(800), mil(1000);
 	
 	private int ataqueDefensa;
 	
