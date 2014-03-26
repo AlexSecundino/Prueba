@@ -12,8 +12,8 @@ public class Principal {
 		/*Cada ronda te dan 2 puntos que servirán para invocar carta*/
 		/*Cada criatura matada te da un punto, quien mas puntos tenga, gana*/
 	
-		Baraja jugador = new Baraja();
-		System.out.println(jugador);
+		Partida nueva = new Partida();
+		System.out.println(nueva.estadoPartida());
 		
 	}
 

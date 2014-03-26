@@ -3,23 +3,23 @@ import java.util.ArrayList;
 
 public class Baraja {
 
-	private ArrayList<Criatura> jugador; 
-	private final int MAX_CRIATURAS = 20;
+	private ArrayList<Criatura> mazo; 
+	private final int TOTAL_CRIATURAS = 40;
 	
 	public Baraja() {
 
-		jugador = new ArrayList<Criatura>();
+		mazo = new ArrayList<Criatura>();
 		
-		for(int i = 1; i <= MAX_CRIATURAS; i++)
+		for(int i = 1; i <= TOTAL_CRIATURAS; i++)
 		{
 			Criatura a = new Criatura();
-			jugador.add(a);
+			mazo.add(a);
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "Mano = " + jugador;
+		return "" + mazo;
 	}
 	
 	
