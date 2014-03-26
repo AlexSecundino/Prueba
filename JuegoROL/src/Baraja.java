@@ -106,7 +106,7 @@ public class Baraja {
 	
 	private boolean comprobarPuntuacion(Criatura a, Criatura b) {
 		// TODO Auto-generated method stub
-		System.out.println("Jugador " + a + "\nVS\nCPU " + b);
+		System.out.println("Jugador " + a + "\n\tVS\nCPU " + b);
 		if(a.getAtaque() > b.getDefensa())
 			return true;
 		else
