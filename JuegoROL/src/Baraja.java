@@ -57,20 +57,6 @@ public class Baraja {
 		
 		mostrarPuntuacion();
 	}
-	
-	private void mostrarPuntuacion() {
-		// TODO Auto-generated method stub
-		
-		System.out.println("Puntos jugador: " + puntos);
-		System.out.println("Puntos CPU: " + puntosCPU);
-		
-		if(puntos > puntosCPU)
-			System.out.println("¡Has ganado! ERES EL PUTO AMO");
-		else if(puntos < puntosCPU)
-			System.out.println("Has perdido :(");
-		else
-			System.out.println("¡Empate!");
-	}
 
 	private void mostrarMano(ArrayList<Criatura> mano) {
 		// TODO Auto-generated method stub
@@ -107,14 +93,38 @@ public class Baraja {
 		mano.remove(indice);
 		return a;
 	}
-
+	
+	private Criatura extraerCriatura() {
+		// TODO Auto-generated method stub
+		Criatura a = null;
+		Random r = new Random();
+		int indice = r.nextInt(mazo.size());
+		a = mazo.get(indice);
+		mazo.remove(indice);
+		return a;	
+	}
+	
 	private boolean comprobarPuntuacion(Criatura a, Criatura b) {
 		// TODO Auto-generated method stub
-		System.out.println("Jugador " + a + "\nVS\nCPU " + b);
+		System.out.println("Jugador " + a + "\n\tVS\nCPU " + b);
 		if(a.getAtaque() > b.getDefensa())
 			return true;
 		else
 			return false;
+	}
+	
+	private void mostrarPuntuacion() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Puntos jugador: " + puntos);
+		System.out.println("Puntos CPU: " + puntosCPU);
+		
+		if(puntos > puntosCPU)
+			System.out.println("¡Has ganado! ERES EL PUTO AMO");
+		else if(puntos < puntosCPU)
+			System.out.println("Has perdido :(");
+		else
+			System.out.println("¡Empate!");
 	}
 
 	private void repartirMazo(){
@@ -125,16 +135,6 @@ public class Baraja {
 		}
 		Collections.sort(jugador);
 		Collections.sort(CPU);
-	}
-	
-	private Criatura extraerCriatura() {
-		// TODO Auto-generated method stub
-		Criatura a = null;
-		Random r = new Random();
-		int indice = r.nextInt(mazo.size());
-		a = mazo.get(indice);
-		mazo.remove(indice);
-		return a;	
 	}
 	
 	@Override
