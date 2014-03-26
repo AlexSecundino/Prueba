@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 
-public class Criatura {
+public class Criatura implements Comparable{
 
 	private int ataque;
 	private int defensa;
@@ -30,11 +30,33 @@ public class Criatura {
 		return a;
 	}
 	
+	@Override
+	public int compareTo(Object o){
+		// TODO Auto-generated method stub
+		Criatura c = (Criatura) o;
+		
+		if(this.costeInvocacion > c.costeInvocacion)
+			return 1;
+		else if(this.costeInvocacion < c.costeInvocacion)
+			return -1;
+		else
+			if(this.ataque > c.ataque)
+				return 1;
+			else if(this.ataque < c.ataque)
+				return -1;
+			else
+				if(this.defensa > c.defensa)
+					return 1;
+				else if(this.defensa < c.defensa)
+					return -1;
+				else
+					return 0;
+	}
 	
 	@Override
 	public String toString() {
-		return "[ataque=" + ataque + ", defensa=" + defensa
-				+ ", costeInvocacion=" + costeInvocacion + "]";
+		return "\nataque=" + ataque + ", defensa=" + defensa
+				+ ", costeInvocacion=" + costeInvocacion;
 	}
-	
+
 }
